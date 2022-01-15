@@ -1,0 +1,11 @@
+html,
+body {
+  font: 14px/1.21 "Helvetica Neue", arial, sans-serif;
+}
+
+.btn-primary {
+  background-color: #ccc;
+  border: none;
+  padding: 12px;
+  border-radius: 0.3rem;
+}

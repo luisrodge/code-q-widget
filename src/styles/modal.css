@@ -1,0 +1,44 @@
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+.modal-window > div {
+  width: 520px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: 0;
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  cursor: pointer;
+}
+
+.modal-footer {
+  text-align: right;
+}
+
+.previous-card-button {
+  margin-right: 10px;
+}

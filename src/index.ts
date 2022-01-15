@@ -1,10 +1,10 @@
-import habitat from 'preact-habitat';
+import habitat from "preact-habitat";
 
-import Widget from './component';
+import Widget from "./Widget";
 
 const _habitat = habitat(Widget);
 
 _habitat.render({
   selector: '[data-widget-host="habitat"]',
-  clean: true
+  clean: true,
 });

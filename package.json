@@ -29,11 +29,13 @@
   "author": "Kirill Shatskiy <kshatskiy.freelance@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "preact": "10.5.7"
+    "preact": "10.5.7",
+    "react-syntax-highlighter": "^15.4.5"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.15",
+    "@types/react-syntax-highlighter": "^13.5.2",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "enzyme": "^3.11.0",

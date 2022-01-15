@@ -1,0 +1,47 @@
+.quiz-header {
+  margin-bottom: 30px;
+}
+
+.question-text {
+  font-weight: normal;
+}
+
+.choices-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+.choice-list-item {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+choice-list-item:last-of-type {
+  margin: 0;
+}
+
+.choice-list-item:hover {
+  background-color: aliceblue;
+}
+
+.quiz-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.selected {
+  background-color: #c6dcf0;
+}
+
+.correct {
+  color: #27ae60;
+}
+
+.wrong {
+  color: #e74c3c;
+}
