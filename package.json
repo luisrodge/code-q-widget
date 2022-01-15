@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "preact watch --template src/template.html",
     "build:widget": "microbundle build",
-    "build:lib": "microbundle build -i src/component.tsx",
+    "build:lib": "microbundle build -i src/Widget.tsx",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}'",
     "test": "jest"
   },
