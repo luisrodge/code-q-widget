@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title><% preact.title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <style>
       .preview {
         width: 100%;
@@ -14,7 +14,7 @@
       }
 
       .preview::before {
-        content: 'WIDGET PREVIEW';
+        content: "WIDGET PREVIEW";
         position: absolute;
         display: block;
         top: -18px;
@@ -25,11 +25,7 @@
     <% preact.headEnd %>
   </head>
   <body>
-    <div data-widget-host="habitat" class="preview">
-      <script type="text/props">
-        { "color": "red" }
-      </script>
-    </div>
+    <div data-widget-host="habitat" class="preview"></div>
     <% preact.bodyEnd %>
   </body>
 </html>
