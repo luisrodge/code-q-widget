@@ -51,7 +51,7 @@ export default function Quiz(): VNode {
               key={choice.id}
               onClick={() => setChoiceId(choice.id)}
             >
-              {choice.value}
+              <p className="choice-text">{choice.value}</p>
             </li>
           ))}
         </ul>
@@ -60,7 +60,6 @@ export default function Quiz(): VNode {
         {choiceId && quiz.correctChoiceId == choiceId && (
           <h3 className="correct">That's correct! Keep it up</h3>
         )}
-
         {choiceId && quiz.correctChoiceId != choiceId && (
           <h3 className="wrong">Sorry! You'll get it next time</h3>
         )}

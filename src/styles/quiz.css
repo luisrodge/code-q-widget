@@ -14,7 +14,7 @@
 }
 
 .choice-list-item {
-  background-color: #f7f7f7;
+  background-color: aliceblue;
   padding: 20px;
   margin-bottom: 14px;
   border-radius: 2px;
@@ -26,7 +26,11 @@ choice-list-item:last-of-type {
 }
 
 .choice-list-item:hover {
-  background-color: aliceblue;
+  background-color: #cbe5fc;
+}
+
+.choice-text {
+  margin: 0;
 }
 
 .quiz-footer {
@@ -35,7 +39,7 @@ choice-list-item:last-of-type {
 }
 
 .selected {
-  background-color: #c6dcf0;
+  background-color: #cbe5fc;
 }
 
 .disabled {

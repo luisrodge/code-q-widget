@@ -5,6 +5,6 @@ import Widget from "./Widget";
 const _habitat = habitat(Widget);
 
 _habitat.render({
-  selector: '[data-widget-host="habitat"]',
+  selector: '[data-widget-host="q-widget"]',
   clean: true,
 });
