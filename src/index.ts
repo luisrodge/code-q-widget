@@ -2,9 +2,9 @@ import habitat from "preact-habitat";
 
 import Widget from "./Widget";
 
-const _habitat = habitat(Widget);
+const { render } = habitat(Widget);
 
-_habitat.render({
+render({
   selector: '[data-widget-host="q-widget"]',
   clean: true,
 });

@@ -1,6 +1,7 @@
 import { h, VNode } from "preact";
 import { useState } from "preact/hooks";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import "../styles/quiz.css";
@@ -19,6 +20,8 @@ const quiz = {
   ],
   correctChoiceId: 1,
 };
+
+SyntaxHighlighter.registerLanguage("javascript", js);
 
 export default function Quiz(): VNode {
   const [choiceId, setChoiceId] = useState(null);
