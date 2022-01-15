@@ -4,11 +4,7 @@ import Modal from "./components/Modal";
 import Quiz from "./components/Quiz";
 import "./styles/style.css";
 
-interface Props {
-  color?: string;
-}
-
-export default function Widget(props: Props): VNode {
+export default function Widget(): VNode {
   return (
     <div>
       <Modal>

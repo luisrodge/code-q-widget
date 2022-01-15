@@ -38,6 +38,10 @@ choice-list-item:last-of-type {
   background-color: #c6dcf0;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .correct {
   color: #27ae60;
 }
