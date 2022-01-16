@@ -16,7 +16,7 @@ export default function Quiz(): VNode {
   useEffect(() => {
     const randQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
     setQuiz(randQuiz);
-  }, [quiz]);
+  }, []);
 
   if (!quiz) return null;
 
