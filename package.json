@@ -8,7 +8,7 @@
   "umd:main": "dist/index.umd.js",
   "scripts": {
     "dev": "preact watch --template src/template.html",
-    "build:widget": "microbundle build --external none --define process.env.NODE_ENV=production --alias react=./node_modules/preact/compat/dist/compat.js",
+    "build": "microbundle build --external none --define process.env.NODE_ENV=production --alias react=./node_modules/preact/compat/dist/compat.js",
     "build:lib": "microbundle build -i src/Widget.tsx",
     "lint": "eslint '{src,tests}/**/*.{ts,tsx}'",
     "test": "jest"
