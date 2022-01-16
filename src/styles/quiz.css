@@ -39,6 +39,10 @@ choice-list-item:last-of-type {
   margin-top: 40px;
 }
 
+.quiz-footer h3 {
+  font-size: 22px !important;
+}
+
 .selected {
   background-color: #cbe5fc;
 }
