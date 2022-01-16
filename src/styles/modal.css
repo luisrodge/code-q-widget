@@ -22,18 +22,27 @@
   border-radius: 0.3rem;
 }
 
-.modal-close {
+.modal-header {
+  display: flex;
+  margin-bottom: 35px;
+  justify-content: space-between;
+}
+
+.question-text {
+  margin: 0;
+}
+
+.modal-btn {
   background-color: transparent;
   border: 0;
   color: #aaa;
-  line-height: 50px;
   font-size: 80%;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 70px;
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.modal-btn:hover {
+  color: #7c7c7c;
 }
 
 .modal-footer {
