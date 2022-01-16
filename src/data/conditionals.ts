@@ -57,6 +57,6 @@ export const conditionals = [
       { value: "Your number is 15", id: 3 },
       { value: "Idk what your number is", id: 4 },
     ],
-    correctChoiceId: 3,
+    correctChoiceId: 2,
   },
 ];
