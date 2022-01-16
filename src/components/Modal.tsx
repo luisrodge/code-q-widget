@@ -1,7 +1,10 @@
 import { h, VNode } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
+import Cookies from "js-cookie";
 
 import "../styles/modal.css";
+
+const LS_KEY = "cqwd";
 
 interface Props {
   color?: string;
@@ -10,7 +13,23 @@ interface Props {
 }
 
 export default function Modal({ children, footer }: Props): VNode {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const day = new Date().getDay().toString();
+
+    const cookieDay = Cookies.get(LS_KEY);
+
+    if (cookieDay) {
+      if (day !== cookieDay) {
+        setIsOpen(true);
+        Cookies.set(LS_KEY, day, { expires: 3 });
+      }
+    } else {
+      setIsOpen(true);
+      Cookies.set(LS_KEY, day, { expires: 3 });
+    }
+  }, [setIsOpen]);
 
   if (!isOpen) return null;
 
