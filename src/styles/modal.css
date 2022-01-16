@@ -7,6 +7,7 @@
   left: 0;
   z-index: 999;
   transition: all 0.3s;
+  font: 14px/1.21 "Helvetica Neue", arial, sans-serif;
 }
 
 .modal-window > div {
