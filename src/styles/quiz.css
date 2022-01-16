@@ -1,9 +1,14 @@
 .quiz-header {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .question-text {
   font-weight: normal;
+}
+
+.quiz-body {
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 .choices-list {
@@ -34,13 +39,18 @@ choice-list-item:last-of-type {
   margin: 0;
 }
 
+.quiz-container {
+  position: relative;
+}
+
 .quiz-footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .quiz-footer h3 {
   font-size: 22px !important;
+  margin: 0;
 }
 
 .selected {

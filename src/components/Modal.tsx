@@ -14,9 +14,10 @@ interface Props {
 }
 
 export default function Modal({ children, footer }: Props): VNode {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
+    return;
     if (Cookies.get(COOKIE_SHOW_KEY)) return;
 
     const day = new Date().getDay().toString();

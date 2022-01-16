@@ -1,40 +1,24 @@
 import { h, VNode } from "preact";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
+import { quizzes } from "../data/quizzes";
 import "../styles/quiz.css";
-
-const quiz = {
-  question: "What will the following code log to the console?",
-  code: ` const age = 18
-  if (age >= 18) {
-    console.log("You are allowed to have a drink")
-  } else {
-    console.log("You are not allowed to have a drink")
-  }`,
-  choices: [
-    { value: "You are allowed to have a drink", id: 1 },
-    { value: "You are not allowed to have a drink", id: 2 },
-  ],
-  correctChoiceId: 1,
-};
 
 SyntaxHighlighter.registerLanguage("javascript", js);
 
 export default function Quiz(): VNode {
+  const [quiz, setQuiz] = useState(undefined);
   const [choiceId, setChoiceId] = useState(null);
 
-  const codeString = `
-    const age = 18
+  useEffect(() => {
+    const randQuiz = quizzes[Math.floor(Math.random() * quizzes.length)];
+    setQuiz(randQuiz);
+  }, [quiz]);
 
-    if (age >= 18) {
-      console.log("You are allowed to have a drink")
-    } else {
-      console.log("You are not allowed to have a drink")
-    }
-  `;
+  if (!quiz) return null;
 
   return (
     <div className="quiz-container">
@@ -47,7 +31,7 @@ export default function Quiz(): VNode {
           style={atomOneDark}
           codeTagProps={{ className: "code-highlighter" }}
         >
-          {codeString}
+          {quiz.code}
         </SyntaxHighlighter>
         <ul className={`choices-list ${choiceId && "disabled"}`}>
           {quiz.choices.map((choice) => (
