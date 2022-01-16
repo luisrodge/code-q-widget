@@ -42,7 +42,11 @@ export default function Quiz(): VNode {
         <h3 className="question-text">{quiz.question}</h3>
       </div>
       <div className="quiz-body">
-        <SyntaxHighlighter language="javascript" style={atomOneDark}>
+        <SyntaxHighlighter
+          language="javascript"
+          style={atomOneDark}
+          codeTagProps={{ className: "code-highlighter" }}
+        >
           {codeString}
         </SyntaxHighlighter>
         <ul className={`choices-list ${choiceId && "disabled"}`}>
