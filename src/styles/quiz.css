@@ -19,6 +19,7 @@
   margin-bottom: 14px;
   border-radius: 2px;
   cursor: pointer;
+  margin-left: 0 !important;
 }
 
 choice-list-item:last-of-type {

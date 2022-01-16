@@ -20,8 +20,6 @@ export default function Modal({ children, footer }: Props): VNode {
 
     const cookieDay = Cookies.get(LS_KEY);
 
-    console.log("cday ", cookieDay);
-
     if (cookieDay) {
       if (day !== cookieDay) {
         setIsOpen(true);
