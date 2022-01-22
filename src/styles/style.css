@@ -9,4 +9,7 @@
   .modal-window > div {
     width: 80%;
   }
+  .question-text {
+    font-size: 20px;
+  }
 }
