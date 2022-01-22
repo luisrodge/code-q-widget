@@ -4,3 +4,9 @@
   padding: 12px;
   border-radius: 0.3rem;
 }
+
+@media only screen and (max-width: 670px) {
+  .modal-window > div {
+    width: 80%;
+  }
+}
