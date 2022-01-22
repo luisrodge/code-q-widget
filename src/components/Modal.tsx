@@ -52,7 +52,7 @@ export default function Modal({ children, footer }: Props): VNode {
     <div className="modal-window">
       <div>
         <div className="modal-header">
-          <p class="question-text">Code question of the day</p>
+          <p class="modal-title-text">Code question of the day</p>
 
           <div>
             <button className="modal-btn" onClick={onDontShowAgain}>

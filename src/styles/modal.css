@@ -28,7 +28,8 @@
   justify-content: space-between;
 }
 
-.question-text {
+.question-text,
+.modal-title-text {
   margin: 0;
 }
 
