@@ -14,9 +14,11 @@ interface Props {
 }
 
 export default function Modal({ children, footer }: Props): VNode {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return;
     if (Cookies.get(COOKIE_SHOW_KEY)) return;
 
     const day = new Date().getDay().toString();
@@ -36,7 +38,10 @@ export default function Modal({ children, footer }: Props): VNode {
 
   if (!isOpen) return null;
 
-  const onClose = () => setIsOpen(false);
+  const onClose = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "unset";
+  };
 
   const onDontShowAgain = () => {
     Cookies.set(COOKIE_SHOW_KEY, "false", { expires: 31 });
